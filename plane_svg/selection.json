@@ -1,0 +1,59 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M786.286 91.429q25.143 29.714 6.857 84.571t-61.714 98.286l-92 92 91.429 397.714q2.857 10.857-6.857 18.857l-73.143 54.857q-4 3.429-10.857 3.429-2.286 0-4-0.571-8.571-1.714-12-9.143l-159.429-290.286-148 148 30.286 110.857q2.857 9.714-4.571 17.714l-54.857 54.857q-5.143 5.143-13.143 5.143h-1.143q-8.571-1.143-13.714-7.429l-108-144-144-108q-6.286-4-7.429-13.143-0.571-7.429 5.143-14.286l54.857-55.429q5.143-5.143 13.143-5.143 3.429 0 4.571 0.571l110.857 30.286 148-148-290.286-159.429q-8-4.571-9.714-13.714-1.143-9.143 5.143-15.429l73.143-73.143q8-7.429 17.143-4.571l380 90.857 91.429-91.429q43.429-43.429 98.286-61.714t84.571 6.857z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"width": 805,
+				"tags": [
+					"plane"
+				],
+				"grid": 14
+			},
+			"attrs": [],
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"prevSize": 28,
+				"name": "plane"
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 0
+		}
+	],
+	"height": 1024,
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16
+	}
+}
