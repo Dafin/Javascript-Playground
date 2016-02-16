@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Google Maps Day!</title>
+
+<style>
+  #map 	{
+  		display: inline-block;
+  		position: relative;
+  		height:48%;
+  		width: 48%;
+  		}
+
+  #story  {
+  float: right;
+  		position: static;
+ 		background-color: gray;
+  		height: 300px;
+  		width: 240px;
+
+  		}
+
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+	var places = [{name: "Hello World!", lat: 42.68, lng: 23.31},
+								{name: "Cousin Adam", lat: 28.19: , lng:-82.74 },
+								{name: "Texas Abode", lat:29.57 , lng:-95.6 },
+								{name: "Cousin Aswad", lat:44.01 , lng:-79.418 },
+								{name: "Bolton", lat:53.57 , lng:-2.44 }];
+  window.onload=function(){
+    var myLatLng = {lat: 34.397, lng: 135.644}; 
+    var myLatLng2 = {lat: 35.427, lng: 136.644};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 8
+    });
+    // also center_changed
+    // map also has     panTo(latlng:  and setCenter(latlng:
+
+
+    map.addListener('mousemove', function(data){
+			var clickLatLng = {lat: data.latLng.lat(),
+			lng: data.latLng.lng()};
+
+			document.getElementById("lat").innerHTML = clickLatLng.lat;
+			document.getElementById("lng").innerHTML = clickLatLng.lng;
+
+        console.log(data.latLng.lat());});
+
+    //var marker
+
+
+
+//    map.addListener('mousemove', function(data){
+//        console.log(data);});
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Hello World!'
+    });
+    var infowindow = new google.maps.InfoWindow({
+      content: "some cool info"
+    });
+    marker.addListener("click", function(data){
+      	infowindow.open(map, marker);
+    	map.panTo(myLatLng2);
+    });
+    // marker also has setVisible
+  	};
+</script>
+
+<!-- Can have &callback=myFunction -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Uhb5NJWAoTTvPIO2_HqYWBl0vAbXoJc"></script>
+
+</head>
+<body>
+<div>Lat: <span id="lat"></span>. Lon: <span id="lng">Lng:</span></div>
+
+  <div id="map"></div><br/>
+<p id="story">hello there</p>
+</body>
+</html>
