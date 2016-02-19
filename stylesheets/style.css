@@ -1,0 +1,63 @@
+
+
+@media only screen and (min-width: 600px) {
+
+	body {background-color: #FFFCD7;}
+	#story {width: 20%;}
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+	body {background-color: #FFFB83;}
+	map  {width: 80%;}
+	#story {width: 500px;}
+}
+
+	#coords  {
+		font-family: "courier", "sans-serif";
+		text-align: center;
+	}
+
+
+  #map 		{
+			  		display: block;
+			  		position: static;
+			  		height:300px;
+			  		width: 40%;
+			  		border-radius: 25px;
+    				border: 2px solid #73AD21;
+    			}
+
+  #story  {
+			 		display: inline-block;
+			  		position: fixed;
+			 		background-color: teal;
+			 		color: white;
+			  		height: 280px;
+			  		/*width: 240px;*/
+			  		right: 5px;
+			  		padding: 10px;
+			  		font-family: Arial, "sans serif";
+			  		line-height: 200%;
+			  		text-align: center;
+			  		border-radius: 25px;
+    				border: 2px solid #73AD21;
+    				overflow-y: scroll;
+		
+  				}
+
+  #code{
+  	font-family: "courier" ;
+  }
+
+header { font-family: Arial, "sans serif";
+font-size: 1.5em;
+text-align: center;
+text-shadow: 2px 2px white;
+
+}
+
+
+
+}

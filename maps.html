@@ -1,116 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title headline>Around the World in 80 .Markers</title>
+    <link href="stylesheets/style.css" rel ="stylesheet"type=
+    "text/css">
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+    </script>
+    <script src="javascripts/js.js" type="text/javascript">
+ <script src="javascripts/ftscroller.js" type="text/javascript">
+    </script><!-- Can have &callback=myFunction -->
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Google Maps Day!</title>
-<style>
-  #map 		{
-			  		display: inline-block;
-			  		position: static;
-			  		height:300px;
-			  		width: 300px;
-    			}
-
-  #story  {
-			 			display: inline-block;
-			  		position: fixed;
-			 			background-color: teal;
-			 			color: white;
-			  		height: 300px;
-			  		width: 240px;
-			  		right: 5px;
-  				}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script>
-
-	var places = [{name: "Hello World!",   lat: 42.68, lng: 23.31},
-								{name: "Cousin Adam",    lat: 28.19, lng:-82.74},
-								{name: "Texas Abode",     lat:29.57 , lng:-95.6},
-								{name: "Cousin Aswad", lat:44.01 , lng:-79.418 },
-								{name: "Bolton Break",   lat:53.57 , lng:-2.44 }];
-
-  window.onload=function(){
-
-    var myLatLng =  {lat: 42.397, lng: 23.644}; 
-    var myLatLng2 = {lat: 35.427, lng: 136.644};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: myLatLng,
-      zoom: 6
-    });
-
-    // also center_changed
-    // map also has     panTo(latlng:  and setCenter(latlng:
-
-
-
-    map.addListener('mousemove', function(data) {
-			var clickLatLng = {lat: data.latLng.lat(),
-			lng: data.latLng.lng()};
-
-			document.getElementById("lat").innerHTML = clickLatLng.lat;
-			document.getElementById("lng").innerHTML = clickLatLng.lng;
-
-        console.log(data.latLng.lat());
-
-      });
-
-   //var marker
-
-  //    map.addListener('mousemove', function(data){
-  //        console.log(data);});
-		var image = 'images/plane.png';
-		
-
-    var marker = new google.maps.Marker({
-      map: map,
-      position: myLatLng,
-      animation: google.maps.Animation.DROP,
-      title: 'Hello World!',
-      icon: image
-
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-      content: "some cool info"
-    });
-
-    marker.addListener("click", function(data){
-      infowindow.open(map, marker);
-    	map.panTo(myLatLng2);
-    });
-    // marker also has setVisible
-
-    	var story = document.getElementById("story");
-			for (var i = 0; i < places.length; i++)
-			{
-   			console.log(places[i]);
-	    	var newDiv = document.createElement("div");
-	    	newDiv.innerHTML = places[i].name;
-	    	newDiv.lat = places[i].lat;
-	    	newDiv.lng = places[i].lng;
-
-	    	newDiv.onclick = function(){
-	    		map.panTo({lat: this.lat, lng: this.lng});
-//	    		alert(this.lat.toString() + " " + this.lng.toString());
-	    	}
-
-	    	story.appendChild(newDiv);
-			}
-  	};
-
-</script>
-<!-- Can have &callback=myFunction -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Uhb5NJWAoTTvPIO2_HqYWBl0vAbXoJc"></script>
+    <script async defer src=
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyA_Uhb5NJWAoTTvPIO2_HqYWBl0vAbXoJc">
+    </script>
 </head>
+<body itemscope itemtype="http://schema.org/WebPage">
+ 
+    <header>
+        Around the world in 80<span id="code">.Markers{}</span>
+    </header>
+    <div id="coords">
+        Latitude: <span id="lat"></span>. Lon: <span id="lng">Lng:</span>
+    </div><br>
 
-<body>
-<div>Lat: <span id="lat"></span>. Lon: <span id="lng">Lng:</span></div>
-	
-	<div id="story">Hello There</br></br></div>
+    <div id="story" class="gallerywrapper">
+        THE JOURNEY<br>
+        <br>
 
+    </div>
 
-
-
-
-<div id="map"></map>
+    <div id="map"></div>
 </body>
 </html>

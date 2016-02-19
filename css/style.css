@@ -1,0 +1,73 @@
+#coords {
+    font-family: "courier", "sans-serif";
+    text-align: center;
+}
+#map {
+    height: 300px;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+#story {
+   /* background-color: teal;*/
+/*    color: white;
+    height: 280px;
+    width: 30%;
+    
+    right: 5px;
+    padding: 10px;*/
+  
+   /* line-height: 200%; */
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    font-variant: small-caps;
+   
+    overflow-y: scroll;
+
+}
+
+
+
+#story .div {
+	background-color: "yellow"
+
+}
+
+
+#code {
+    font-family: "courier", "sans-serif";
+
+}
+
+
+
+header {
+    font-family: Arial, "sans serif";
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px white;
+}
+@media only screen and (min-width: 600px) {
+    body background-color: #FFFCD7;
+}
+	#story {
+	    width: 20%;
+	    display: inline-block;
+	    position: relative;
+	}
+	#map {
+	    display: inline-block;
+	    position: fixed;
+	}
+	}
+@media only screen and (min-width: 1000px) {
+    body {
+        background-color: #FFFB83;
+    }
+    #map {
+        width: 80%;
+    }
+    #story {
+        width: 500px;
+    }
+}
