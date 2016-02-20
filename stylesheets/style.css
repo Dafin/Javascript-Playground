@@ -31,14 +31,14 @@
 
   #story  {
 			 		display: inline-block;
-			  		position: fixed;
+			  		/*position: fixed;*/
 			 		background-color: teal;
 			 		color: white;
 			  		height: 280px;
 			  		/*width: 240px;*/
 			  		right: 5px;
 			  		padding: 10px;
-			  		font-family: Arial, "sans serif";
+			  		font-family: Roboto, Arial, "sans serif";
 			  		line-height: 200%;
 			  		text-align: center;
 			  		border-radius: 25px;
@@ -47,8 +47,22 @@
 		
   				}
 
+
+
+   #story li:hover     {
+
+   	color: teal;
+   	list-style: none;
+   	background-color: white;
+
+
+
+   }
+
+
   #code{
   	font-family: "courier" ;
+  	color: gray;
   }
 
 header { font-family: Arial, "sans serif";

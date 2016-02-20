@@ -90,7 +90,7 @@
     var story = document.getElementById("story");
     for (var i = 0; i < places.length; i++) {
         console.log(places[i]);
-        var newDiv = document.createElement("div");
+        var newDiv = document.createElement("li");
         newDiv.innerHTML = places[i].name;
         newDiv.lat = places[i].lat;
         newDiv.lng = places[i].lng;
