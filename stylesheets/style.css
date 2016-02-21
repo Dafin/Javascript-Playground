@@ -22,7 +22,7 @@
 
   #map 		{
 			  		display: block;
-			  		position: static;
+			  		/*position: static;*/
 			  		height:300px;
 			  		width: 40%;
 			  		border-radius: 25px;
@@ -49,16 +49,17 @@
 
 
 
+   #story li    {
+
+  	list-style: none;
+   }
+
    #story li:hover     {
 
    	color: teal;
    	list-style: none;
    	background-color: white;
-
-
-
    }
-
 
   #code{
   	font-family: "courier" ;
@@ -72,6 +73,18 @@ text-shadow: 2px 2px white;
 
 }
 
+
+#info {
+	right; 5px;
+	display: inline-block;
+	background-color:lightgray;
+	width: 22%;
+	height: 300px;
+	border: 2px solid #73AD21;
+
+
+	
+}
 
 
 }

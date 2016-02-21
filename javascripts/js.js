@@ -1,52 +1,41 @@
 
-	var places = 	[{name: "Hello World!",   lat: 42.68, lng: 23.31},
-								{name: "Flow rider",    lat: 28.19, lng:-82.74},
-								{name: "Yee Hah",     lat:29.57 , lng:-95.6},
+	var places = 	[{name: "Hello World!",   lat: 42.68, lng: 23.31, zoom: 14,
+        info: "hfgjjgyfjmf,migtryhtdfriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg" },
+								{name: "Flow rider", lat: 28.19, lng:-82.74, zoom: 17,  info: "tyhjtyhedfvryhtdfriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg"  },
+								{name: "Yee Hah",     lat:29.57 , lng:-95.6,  info: "ewrwrwerwerwsdffriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg" },
 								{name: "Can'a da", lat:44.01 , lng:-79.418 },
                                 {name: "Chillin'", lat:44.01 , lng:-79.418 },
-                                {name: "BD", lat:44.01 , lng:-79.418 },
+                                {name: "Bang La Desh", lat:44.01 , lng:-79.418 },
                                 {name: "Island", lat:44.01 , lng:-79.418 },
                                 {name: "SP", lat:44.01 , lng:-79.418 },
                                 {name: "Bel Chocolates", lat:44.01 , lng:-79.418 },
-{name: "NL", lat:44.01 , lng:-79.418 },
-{name: "SW", lat:44.01 , lng:-79.418 },
-{name: "RU", lat:44.01 , lng:-79.418 },
-{name: "IND", lat:44.01 , lng:-79.418 },
-{name: "TH", lat:44.01 , lng:-79.418 },
-{name: "dub", lat:44.01 , lng:-79.418 },
-{name: "galway", lat:44.01 , lng:-79.418 },
-{name: "cavan", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-{name: "SP", lat:44.01 , lng:-79.418 },
-
-
-
+                                {name: "NL", lat:44.01 , lng:-79.418 },
+                                {name: "Sweden", lat:44.01 , lng:-79.418 },
+                                {name: "Mos Cow", lat:44.01 , lng:-79.418 },
+                                {name: "In De a", lat:44.01 , lng:-79.418 },
+                                {name: "TH", lat:44.01 , lng:-79.418 },
+                                {name: "Dub Lin", lat:44.01 , lng:-79.418 },
+                                {name: "galway", lat:44.01 , lng:-79.418 },
+                                {name: "cavan", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:144.01 , lng:29.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
+                                {name: "SP", lat:44.01 , lng:-79.418 },
                                 {name: "FR", lat:44.01 , lng:-79.418 },
-
-
-
-
-
-
-
-
-								{name: "VA",   lat:53.57 , lng:-2.44 }];
-
+                                {name: "VA",   lat:53.57 , lng:-2.44 }];
   window.onload=function(){
 
     var myLatLng =  {lat: 42.397, lng: 23.644}; 
@@ -91,6 +80,9 @@
     for (var i = 0; i < places.length; i++) {
         console.log(places[i]);
         var newDiv = document.createElement("li");
+
+
+
         newDiv.innerHTML = places[i].name;
         newDiv.lat = places[i].lat;
         newDiv.lng = places[i].lng;
