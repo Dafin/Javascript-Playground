@@ -17,7 +17,7 @@
                                 {name: "Dub Lin", lat:44.01 , lng:-79.418 },
                                 {name: "Galway", lat:44.01 , lng:-79.418 },
                                 {name: "Cavan", lat:44.01 , lng:-79.418 },
-                                {name: "SP", lat:144.01 , lng:29.418 },
+                                {name: "Lon Don", lat:14 , lng:29.418 },
                                 {name: "SP", lat:44.01 , lng:-79.418 },
                                 {name: "SP", lat:44.01 , lng:-79.418 },
                                 {name: "SP", lat:44.01 , lng:-79.418 },
@@ -37,6 +37,7 @@
                                 {name: "FR", lat:44.01 , lng:-79.418 },
                                 {name: "VA",   lat:53.57 , lng:-2.44 }];
   window.onload=function(){
+            $("#info").html(places[0].info);
 
     var myLatLng =  {lat: 42.397, lng: 23.644}; 
     var myLatLng2 = {lat: 35.427, lng: 136.644};
@@ -53,8 +54,8 @@
             lat: data.latLng.lat(),
             lng: data.latLng.lng()
         };
-        document.getElementById("lat").innerHTML = clickLatLng.lat;
-        document.getElementById("lng").innerHTML = clickLatLng.lng;
+        $("#lat").html(clickLatLng.lat);
+        $("#lng").html(clickLatLng.lng);
         console.log(data.latLng.lat());
     });
     //var marker
@@ -86,14 +87,99 @@
         newDiv.innerHTML = places[i].name;
         newDiv.lat = places[i].lat;
         newDiv.lng = places[i].lng;
+        newDiv.info= places[i].info;
         newDiv.onclick = function() {
             map.panTo({
                 lat: this.lat,
                 lng: this.lng
             });
+
+            $("#info").html(this.info);
+
+
+
             //          alert(this.lat.toString() + " " + this.lng.toString());
         }
         story.appendChild(newDiv);
     }
 };
+
+
+
+
+// Here is a basic code example using HTML5 geolocation to get the user's position. It then calls nearestcity() and calculates the distance (km) from the location to each city. I passed on using the Haversine formulae and instead used the simpler Pythagoras formulae and an equirectangular projection to adjust for the curvature in longitude lines.
+
+
+// <script>
+// // Get User's Coordinate from their Browser
+//     window.onload = function () {
+//         // HTML5/W3C Geolocation
+//         if ( navigator.geolocation )
+//         {
+//             navigator.geolocation.getCurrentPosition( UserLocation );
+//         }
+//         // Default to Washington, DC
+//         else
+//             NearestCity( 38.8951, -77.0367 );
+//     }
+
+//     // Callback function for asynchronous call to HTML5 geolocation
+//     function UserLocation( position )
+//     {
+//         NearestCity( position.coords.latitude, position.coords.longitude );
+//     }
+
+
+//     // Convert Degress to Radians
+//     function Deg2Rad( deg ) {
+//        return deg * Math.PI / 180;
+//     }
+
+//     function PythagorasEquirectangular( lat1, lon1, lat2, lon2 )
+//     {
+//     lat1 = Deg2Rad(lat1);
+//     lat2 = Deg2Rad(lat2);
+//     lon1 = Deg2Rad(lon1);
+//     lon2 = Deg2Rad(lon2);
+//     var R = 6371; // km
+//     var x = (lon2-lon1) * Math.cos((lat1+lat2)/2);
+//     var y = (lat2-lat1);
+//     var d = Math.sqrt(x*x + y*y) * R;
+//     return d;
+//     }
+
+//     var lat=20; // user's latitude
+//     var lon=40; // user's longitude
+
+//     var cities= [
+//     ["city1", 10, 50, "blah" ],
+//     ["city2", 40, 60, "blah" ],
+//     ["city3", 25, 10, "blah" ],
+//     ["city4", 5,  80, "blah" ]
+//     ];
+
+//     function NearestCity( latitude, longitude )
+//     {
+//         var mindif=99999;
+//         var closest;
+
+//         for (index = 0; index < cities.length; ++index) {
+//             var dif =  PythagorasEquirectangular( lat, lon, cities[ index ][ 1 ], cities[ index ][ 2 ] );
+//             if ( dif < mindif )
+//             {
+//                 closest=index;
+//                 mindif = dif;
+//             }
+//         }
+
+//         // echo the nearest city
+//         alert( cities[ closest ] );
+//     }
+// </script>
+
+
+
+
+
+
 
