@@ -111,7 +111,8 @@ var lastClick = null;
 
 
 
-                $("#next-info").html(this.info);
+                $("#next-info").html(this.info).prop("class","pt-page-moveToLeftFade");
+                $("#info").prop("class","pt-page-moveFromRightFade");
             };
             //          alert(this.lat.toString() + " " + this.lng.toString());
         } (i);
