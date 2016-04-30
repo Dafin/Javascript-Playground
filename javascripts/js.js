@@ -36,6 +36,10 @@
                                 {name: "SP", lat:44.01 , lng:-79.418 },
                                 {name: "FR", lat:44.01 , lng:-79.418 },
                                 {name: "VA",   lat:53.57 , lng:-2.44 }];
+  
+
+var lastClick = null;
+
   window.onload=function(){
             $("#info").html(places[0].info);
 
@@ -88,18 +92,31 @@
         newDiv.lat = places[i].lat;
         newDiv.lng = places[i].lng;
         newDiv.info= places[i].info;
-        newDiv.onclick = function() {
-            map.panTo({
-                lat: this.lat,
-                lng: this.lng
-            });
-
-            $("#info").html(this.info);
 
 
 
+
+        newDiv.onclick = function(x) {
+            // Closure here is like variable scoping, but only for a function
+            return function(){
+                map.panTo({
+                    lat: this.lat,
+                    lng: this.lng
+                });
+      
+
+
+                  console.log(lastClick);
+                lastClick = x;
+
+
+
+                $("#next-info").html(this.info);
+            };
             //          alert(this.lat.toString() + " " + this.lng.toString());
-        }
+        } (i);
+
+
         story.appendChild(newDiv);
     }
 };
