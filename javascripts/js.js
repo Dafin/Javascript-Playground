@@ -1,7 +1,7 @@
 
 	var places = 	[{name: "Hello World!",   lat: 42.68, lng: 23.31, zoom: 14,
-        info: "hfgjjgyfjmf,migtryhtdfriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg" },
-								{name: "Flow rider", lat: 28.19, lng:-82.74, zoom: 17,  info: "tyhjtyhedfvryhtdfriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg"  },
+        info: "first thing" },
+								{name: "Flow rider", lat: 28.19, lng:-82.74, zoom: 17,  info: "second thing\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg"  },
 								{name: "Yee Hah",     lat:29.57 , lng:-95.6,  info: "ewrwrwerwerwsdffriuyogtfrhgfdghtjykulkjghfddghjkgfd\nghjgjhgjhgjhgjhgjhgjhgjhgjgjghjhgjhgjhg" },
 								{name: "Can'a da", lat:44.01 , lng:-79.418 },
                                 {name: "Chillin'", lat:44.01 , lng:-79.418 },
@@ -106,13 +106,19 @@ var lastClick = null;
       
 
 
-                  console.log(lastClick);
+                  // console.log(lastClick);
                 lastClick = x;
 
 
+// Swapping div element contents
+                $("#next-info").html(this.info).addClass("pt-page-moveFromRightFade");
+                $("#info").addClass("pt-page-moveToLeftFade").on("webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend", function (){
+                        console.log("hello");
 
-                $("#next-info").html(this.info).prop("class","pt-page-moveToLeftFade");
-                $("#info").prop("class","pt-page-moveFromRightFade");
+                        $("#info").html($("#next-info").html());
+                        $("#next-info").removeClass("pt-page-moveFromRightFade");
+                        $("#info").removeClass("pt-page-moveToLeftFade");
+                });
             };
             //          alert(this.lat.toString() + " " + this.lng.toString());
         } (i);
