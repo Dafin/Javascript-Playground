@@ -58,6 +58,7 @@ header {
 	#map {
 	    display: inline-block;
 	    position: fixed;
+        height: 240px;
 	}
 	}
 @media only screen and (min-width: 1000px) {
